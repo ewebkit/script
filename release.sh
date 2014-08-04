@@ -1,2 +1,37 @@
 # !/bin/sh
-tar cvzf ewebkit-1.11.0-alpha1.tar.gz --dereference --exclude=webkit/.git --exclude=webkit/Examples --exclude=webkit/ManualTests --exclude=webkit/Websites --exclude=webkit/LayoutTests --exclude=webkit/PerformanceTests  --exclude=webkit/Source/WebKit --exclude=webkit/WebKitLibraries --exclude=webkit/build webkit
+tar cvzf ewebkit-1.11.0-alpha1.tar.gz --dereference \
+        --exclude=*/Cocoa \
+        --exclude=*/avfoundations \
+        --exclude=*/cocoa \
+        --exclude=*/cf \
+        --exclude=*/gtk \
+        --exclude=*/ios \
+        --exclude=*/win \
+        --exclude=*/wince \
+        --exclude=*.xcodeproj \
+        --exclude=*.xcworkspace \
+        --exclude=*.vcxproj \
+        --exclude=ewebkit/Examples \
+        --exclude=ewebkit/.git \
+        --exclude=ewebkit/LayoutTests \
+        --exclude=ewebkit/ManualTests \
+        --exclude=ewebkit/PerformanceTests \
+        --exclude=ewebkit/Source/WebKit/English.lproj \
+        --exclude=ewebkit/Source/WebKit/mac \
+        --exclude=ewebkit/Source/JavaScriptCore/tests \
+        --exclude=ewebkit/Tools/asan \
+        --exclude=ewebkit/Tools/BuildSlaveSupport \
+        --exclude=ewebkit/Tools/CodeCoverage \
+        --exclude=ewebkit/Tools/CSSTestSuitHarness \
+        --exclude=ewebkit/Tools/QueueStatusServer \
+        --exclude=ewebkit/Tools/Scripts \
+        --exclude=ewebkit/Tools/TestResultServer \
+        --exclude=ewebkit/Tools/TestWebKitAPI \
+        --exclude=ewebkit/Tools/WebKitLauncher \
+        --exclude=ewebkit/Tools/WinLauncher \
+        --exclude=ewebkit/Tools/WinCELauncher \
+        --exclude=ewebkit/Tools/iExploder \
+        --exclude=ewebkit/WebKitLibraries \
+        --exclude=ewebkit/Websites \
+        --exclude=ewebkit/build \
+        ewebkit

@@ -1,5 +1,5 @@
 
 Before using this scripts.
 
-ln -s /your/ewebkit webkit
+ln -s /your/ewebkit ewebkit
 
