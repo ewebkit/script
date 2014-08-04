@@ -17,7 +17,6 @@ tar cvzf ewebkit-1.11.0-alpha1.tar.gz --dereference \
         --exclude=ewebkit/ManualTests \
         --exclude=ewebkit/PerformanceTests \
         --exclude=ewebkit/Source/WebKit/English.lproj \
-        --exclude=ewebkit/Source/WebKit/mac \
         --exclude=ewebkit/Source/JavaScriptCore/tests \
         --exclude=ewebkit/Tools/asan \
         --exclude=ewebkit/Tools/BuildSlaveSupport \
