@@ -7,8 +7,11 @@ then
 fi
 
 excludePattern="--exclude=*/avfoundations \
+        --exclude=*/avfoundation \
         --exclude=*/cf \
+        --exclude=*/ca \
         --exclude=*/cg \
+        --exclude=*ChangeLog-*
         --exclude=*/cocoa \
         --exclude=*/Cocoa \
         --exclude=ewebkit/build \
@@ -19,11 +22,14 @@ excludePattern="--exclude=*/avfoundations \
         --exclude=ewebkit/PerformanceTests \
         --exclude=ewebkit/Source/JavaScriptCore/tests \
         --exclude=ewebkit/Source/WebCore/bindings/gobject \
+        --exclude=ewebkit/Source/WebCore/bridge/objc \
         --exclude=ewebkit/Source/WebKit \
         --exclude=ewebkit/Tools/asan \
         --exclude=ewebkit/Tools/BuildSlaveSupport \
         --exclude=ewebkit/Tools/CodeCoverage \
         --exclude=ewebkit/Tools/CSSTestSuitHarness \
+        --exclude=ewebkit/Tools/CygwinDownloader \
+        --exclude=ewebkit/Tools/EWSTools \
         --exclude=ewebkit/Tools/iExploder \
         --exclude=ewebkit/Tools/QueueStatusServer \
         --exclude=ewebkit/Tools/Scripts \
@@ -35,20 +41,28 @@ excludePattern="--exclude=*/avfoundations \
         --exclude=ewebkit/WebKitBuild \
         --exclude=ewebkit/WebKitLibraries \
         --exclude=ewebkit/Websites \
+        --exclude=*.gitattributes \
         --exclude=*.gitignore \
-        --exclude=*.gitattribute \
         --exclude=*/gtk \
         --exclude=*/ios \
         --exclude=*/mac \
+        --exclude=*.make \
+        --exclude=*Makefile \
+        --exclude=*Makefile.shared \
+        --exclude=*.order \
+        --exclude=*PlatformGtk.cmake \
+        --exclude=*PlatformWinCE.cmake \
+        --exclude=tags \
         --exclude=*.vcxproj \
+        --exclude=*.vsprops \
+        --exclude=*webkit2gtk* \
         --exclude=*/win \
         --exclude=*/wince \
+        --exclude=*.xcconfig \
         --exclude=*.xcodeproj \
         --exclude=*.xcworkspace \
-        --exclude=*ChangeLog-*
-        --exclude=*.order \
-        --exclude=tags \
 "
+
 tar cvzf ewebkit-$1.tar.gz --dereference \
         $excludePattern \
         ewebkit
